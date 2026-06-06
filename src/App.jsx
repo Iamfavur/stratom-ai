@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import {
   Search, FileText, Video, Mic, Image as ImageIcon,
   ShieldCheck, Database, Cpu, ChevronRight, Lock,
-  Workflow, Layers, Server, Terminal, ArrowRight,
-  CheckCircle2, Building, Scale, Clapperboard, HelpCircle
+  Workflow, Layers, Server, Terminal, CheckCircle2,
+  Building, Scale, Clapperboard, HelpCircle
 } from 'lucide-react';
 
 const App = () => {
@@ -35,18 +35,18 @@ const App = () => {
     <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-cyan-900 selection:text-cyan-50 antialiased">
 
       {/* --- Top Utility Bar --- */}
-      <div className="bg-slate-900/60 border-b border-slate-800/40 text-[11px] font-mono py-1.5 px-6 text-center text-slate-500 tracking-wider">
+      <div className="bg-slate-900/60 border-b border-slate-800/40 text-[9px] sm:text-[11px] font-mono py-1.5 px-4 sm:px-6 text-center text-slate-500 tracking-wider">
         SECURITY NOTICE: ALL UPLOADS ARE FULLY ENCRYPTED AND KEPT 100% PRIVATE TO YOUR COMPANY
       </div>
 
       {/* --- Navigation --- */}
       <header className="sticky top-0 w-full z-50 border-b border-slate-900 bg-slate-950/70 backdrop-blur-xl">
-        <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Main Navigation">
-          <a href="/" className="flex items-center gap-2.5" aria-label="Stratom AI Home">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-700 flex items-center justify-center shadow-lg shadow-cyan-950/50">
-              <Database className="w-5 h-5 text-white" aria-hidden="true" />
+        <nav className="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between" aria-label="Main Navigation">
+          <a href="/" className="flex items-center gap-2 md:gap-2.5" aria-label="Stratom AI Home">
+            <div className="w-7 h-7 md:w-9 md:h-9 rounded-lg bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-700 flex items-center justify-center shadow-lg shadow-cyan-950/50 flex-shrink-0">
+              <Database className="w-4 h-4 md:w-5 md:h-5 text-white" aria-hidden="true" />
             </div>
-            <span className="text-2xl font-black text-white tracking-tight">STRATOM<span className="text-cyan-500 font-medium">.AI</span></span>
+            <span className="text-lg md:text-2xl font-black text-white tracking-tight">STRATOM<span className="text-cyan-500 font-medium">.AI</span></span>
           </a>
 
           <div className="hidden lg:flex gap-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
@@ -57,8 +57,8 @@ const App = () => {
             <a href="#governance" className="hover:text-cyan-400 transition-colors">Security</a>
           </div>
 
-          <div className="flex items-center gap-4">
-            <a href="#waitlist-section" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-cyan-950/40">
+          <div className="flex items-center">
+            <a href="#waitlist-section" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-3 py-2 md:px-5 md:py-2.5 rounded-lg text-[10px] md:text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-cyan-950/40 whitespace-nowrap">
               Request Access
             </a>
           </div>
@@ -67,14 +67,14 @@ const App = () => {
 
       <main>
         {/* --- Hero Section --- */}
-        <section className="relative pt-32 pb-24 overflow-hidden border-b border-slate-900 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900/40 via-slate-950 to-slate-950">
+        <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden border-b border-slate-900 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900/40 via-slate-950 to-slate-950">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 rounded-full blur-[160px] pointer-events-none"></div>
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none"></div>
 
           <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-medium mb-8 shadow-inner">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-[10px] md:text-xs font-medium mb-8 shadow-inner">
               <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-              <span className="font-mono text-[11px] tracking-wider uppercase text-slate-300">Stratom Enterprise Platform v2.4</span>
+              <span className="font-mono tracking-wider uppercase text-slate-300">Stratom Enterprise Platform v2.4</span>
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight mb-8 leading-[1.1]">
@@ -84,12 +84,12 @@ const App = () => {
               </span>
             </h1>
 
-            <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-400 mb-14 leading-relaxed font-normal">
+            <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-400 mb-10 md:mb-14 leading-relaxed font-normal">
               Stop wasting hours looking for information. Stratom securely reads your company's videos, meeting recordings, PDFs, and images, allowing your employees to ask questions and find exact answers in seconds.
             </p>
 
             {/* Inline Waitlist Callout */}
-            <div id="waitlist-section" className="max-w-xl mx-auto bg-slate-900/80 p-2.5 rounded-xl border border-slate-800/80 shadow-2xl backdrop-blur-md">
+            <div id="waitlist-section" className="max-w-xl mx-auto bg-slate-900/80 p-2 md:p-2.5 rounded-xl border border-slate-800/80 shadow-2xl backdrop-blur-md">
               <form onSubmit={handleJoinWaitlist} className="flex flex-col sm:flex-row gap-2" aria-label="Waitlist Form">
                 <label htmlFor="email" className="sr-only">Enter your work email address</label>
                 <input
@@ -112,21 +112,21 @@ const App = () => {
               </form>
             </div>
 
-            <div className="mt-6 flex justify-center items-center gap-8 text-[11px] font-mono tracking-widest text-slate-500 uppercase">
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-4 md:gap-8 text-[10px] md:text-[11px] font-mono tracking-widest text-slate-500 uppercase">
               <span>SOC2 COMPLIANT READY</span>
-              <span>•</span>
+              <span className="hidden sm:inline">•</span>
               <span>PRIVATE CLOUD HOSTING</span>
-              <span>•</span>
+              <span className="hidden sm:inline">•</span>
               <span>ZERO DATA SHARING</span>
             </div>
           </div>
         </section>
 
         {/* --- Multimodal Processing Hub --- */}
-        <section id="pipeline" className="py-28 border-b border-slate-900 bg-slate-900/10">
+        <section id="pipeline" className="py-20 md:py-28 border-b border-slate-900 bg-slate-900/10">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="max-w-3xl mb-20">
-              <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// HOW STRATOM WORKS</h2>
+            <div className="max-w-3xl mb-12 md:mb-20">
+              <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// HOW STRATOM WORKS</h2>
               <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Upload Any File. Find Any Answer.</h3>
               <p className="text-slate-400 text-base md:text-lg leading-relaxed">
                 Our AI watches, listens, and reads just like a human would. It takes your messy, unorganized files and turns them into a smart, searchable library for your whole team.
@@ -151,13 +151,13 @@ const App = () => {
                       aria-selected={isSelected}
                       aria-controls={`panel-${tab.id}`}
                       onClick={() => setActiveTab(tab.id)}
-                      className={`w-full text-left p-5 rounded-xl border transition-all duration-200 ${isSelected
-                        ? 'bg-slate-900 border-cyan-800 shadow-xl shadow-cyan-950/20'
-                        : 'bg-transparent border-slate-900 hover:border-slate-800 hover:bg-slate-900/30'
+                      className={`w-full text-left p-4 md:p-5 rounded-xl border transition-all duration-200 ${isSelected
+                          ? 'bg-slate-900 border-cyan-800 shadow-xl shadow-cyan-950/20'
+                          : 'bg-transparent border-slate-900 hover:border-slate-800 hover:bg-slate-900/30'
                         }`}
                     >
                       <div className="flex items-start gap-4">
-                        <div className={`p-2.5 rounded-lg border ${isSelected ? 'bg-cyan-950/50 border-cyan-800 text-cyan-400' : 'bg-slate-950 border-slate-800 text-slate-500'}`}>
+                        <div className={`p-2.5 rounded-lg border flex-shrink-0 ${isSelected ? 'bg-cyan-950/50 border-cyan-800 text-cyan-400' : 'bg-slate-950 border-slate-800 text-slate-500'}`}>
                           <IconComp className="w-5 h-5" aria-hidden="true" />
                         </div>
                         <div>
@@ -170,28 +170,28 @@ const App = () => {
                 })}
               </div>
 
-              <div role="tabpanel" id={`panel-${activeTab}`} className="lg:col-span-8 bg-slate-900/40 border border-slate-900 rounded-2xl p-8 min-h-[400px] flex flex-col justify-between relative overflow-hidden backdrop-blur-sm shadow-inner">
+              <div role="tabpanel" id={`panel-${activeTab}`} className="lg:col-span-8 bg-slate-900/40 border border-slate-900 rounded-2xl p-6 md:p-8 min-h-[400px] flex flex-col justify-between relative overflow-hidden backdrop-blur-sm shadow-inner">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-900/5 rounded-full blur-3xl pointer-events-none"></div>
 
                 {activeTab === 'video' && (
                   <>
                     <div>
-                      <div className="flex items-center gap-2 text-xs font-mono text-cyan-400 bg-cyan-950/40 border border-cyan-900/60 px-3 py-1 rounded-md w-fit mb-6">
+                      <div className="flex items-center gap-2 text-[10px] md:text-xs font-mono text-cyan-400 bg-cyan-950/40 border border-cyan-900/60 px-3 py-1 rounded-md w-fit mb-6">
                         <Cpu className="w-3.5 h-3.5" aria-hidden="true" /> FEATURE: SMART VIDEO
                       </div>
-                      <h4 className="text-2xl font-bold text-white mb-4">Stop skipping through hours of footage.</h4>
-                      <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                      <h4 className="text-xl md:text-2xl font-bold text-white mb-4">Stop skipping through hours of footage.</h4>
+                      <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
                         Instead of manually watching long videos to find what you need, Stratom watches for you. You can upload Zoom recordings, training videos, or security footage, and our AI will let you search for specific actions, spoken words, or visual objects instantly.
                       </p>
-                      <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-xs text-slate-400">
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Jump exactly to the right timestamp</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Automatically spot safety hazards</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Read text written on whiteboards</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Summarize long training modules</div>
+                      <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-[11px] md:text-xs text-slate-400">
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500 flex-shrink-0" /> Jump exactly to the right timestamp</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500 flex-shrink-0" /> Automatically spot safety hazards</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500 flex-shrink-0" /> Read text written on whiteboards</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500 flex-shrink-0" /> Summarize long training modules</div>
                       </div>
                     </div>
-                    <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-500">
-                      <span className="text-cyan-500">Example Search:</span> "Show me the part of the video where we discussed the new safety helmets."
+                    <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-[10px] md:text-xs text-slate-500 leading-relaxed">
+                      <span className="text-cyan-500 block sm:inline mb-1 sm:mb-0 mr-2">Example Search:</span> "Show me the part of the video where we discussed the new safety helmets."
                     </div>
                   </>
                 )}
@@ -199,22 +199,22 @@ const App = () => {
                 {activeTab === 'audio' && (
                   <>
                     <div>
-                      <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-3 py-1 rounded-md w-fit mb-6">
+                      <div className="flex items-center gap-2 text-[10px] md:text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-3 py-1 rounded-md w-fit mb-6">
                         <Cpu className="w-3.5 h-3.5" aria-hidden="true" /> FEATURE: SMART AUDIO
                       </div>
-                      <h4 className="text-2xl font-bold text-white mb-4">Every meeting and call, neatly typed out.</h4>
-                      <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                      <h4 className="text-xl md:text-2xl font-bold text-white mb-4">Every meeting and call, neatly typed out.</h4>
+                      <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
                         Don't rely on handwritten notes. Upload your recorded meetings, customer support calls, or voice memos. Stratom listens to the audio, types out every single word, and labels who said what, making it completely searchable.
                       </p>
-                      <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-xs text-slate-400">
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Highly accurate typing (even with accents)</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Identifies different people speaking</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Creates simple meeting summaries</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Understands industry-specific terms</div>
+                      <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-[11px] md:text-xs text-slate-400">
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Highly accurate typing (even with accents)</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Identifies different people speaking</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Creates simple meeting summaries</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Understands industry-specific terms</div>
                       </div>
                     </div>
-                    <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-500">
-                      <span className="text-emerald-500">Example Search:</span> "What did the client say about our pricing in last week's call?"
+                    <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-[10px] md:text-xs text-slate-500 leading-relaxed">
+                      <span className="text-emerald-500 block sm:inline mb-1 sm:mb-0 mr-2">Example Search:</span> "What did the client say about our pricing in last week's call?"
                     </div>
                   </>
                 )}
@@ -222,22 +222,22 @@ const App = () => {
                 {activeTab === 'document' && (
                   <>
                     <div>
-                      <div className="flex items-center gap-2 text-xs font-mono text-violet-400 bg-violet-950/40 border border-violet-900/60 px-3 py-1 rounded-md w-fit mb-6">
+                      <div className="flex items-center gap-2 text-[10px] md:text-xs font-mono text-violet-400 bg-violet-950/40 border border-violet-900/60 px-3 py-1 rounded-md w-fit mb-6">
                         <Cpu className="w-3.5 h-3.5" aria-hidden="true" /> FEATURE: SMART DOCUMENTS
                       </div>
-                      <h4 className="text-2xl font-bold text-white mb-4">Never read a 100-page manual again.</h4>
-                      <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                      <h4 className="text-xl md:text-2xl font-bold text-white mb-4">Never read a 100-page manual again.</h4>
+                      <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
                         Upload your employee handbooks, legal contracts, complex tables, and past project proposals. Instead of hitting CTRL+F and hoping for the best, you can just ask Stratom a question in plain English, and it will read the documents to give you the exact answer.
                       </p>
-                      <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-xs text-slate-400">
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Easily reads PDFs, Word, and Excel files</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Understands complicated charts and tables</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Always links back to the original page source</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Fills out client security questionnaires automatically</div>
+                      <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-[11px] md:text-xs text-slate-400">
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500 flex-shrink-0" /> Easily reads PDFs, Word, and Excel files</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500 flex-shrink-0" /> Understands complicated charts and tables</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500 flex-shrink-0" /> Always links back to the original page source</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500 flex-shrink-0" /> Fills out client security questionnaires automatically</div>
                       </div>
                     </div>
-                    <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-500">
-                      <span className="text-violet-500">Example Search:</span> "How many vacation days do part-time employees get?"
+                    <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-[10px] md:text-xs text-slate-500 leading-relaxed">
+                      <span className="text-violet-500 block sm:inline mb-1 sm:mb-0 mr-2">Example Search:</span> "How many vacation days do part-time employees get?"
                     </div>
                   </>
                 )}
@@ -245,22 +245,22 @@ const App = () => {
                 {activeTab === 'image' && (
                   <>
                     <div>
-                      <div className="flex items-center gap-2 text-xs font-mono text-amber-400 bg-amber-950/40 border border-amber-900/60 px-3 py-1 rounded-md w-fit mb-6">
+                      <div className="flex items-center gap-2 text-[10px] md:text-xs font-mono text-amber-400 bg-amber-950/40 border border-amber-900/60 px-3 py-1 rounded-md w-fit mb-6">
                         <Cpu className="w-3.5 h-3.5" aria-hidden="true" /> FEATURE: SMART IMAGES
                       </div>
-                      <h4 className="text-2xl font-bold text-white mb-4">Organize thousands of photos effortlessly.</h4>
-                      <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                      <h4 className="text-xl md:text-2xl font-bold text-white mb-4">Organize thousands of photos effortlessly.</h4>
+                      <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
                         If your team takes photos of job sites, whiteboards, or equipment, organizing them is a nightmare. Upload them to Stratom, and our AI will automatically look at the picture, understand what's in it, and tag it so you can find it later.
                       </p>
-                      <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-xs text-slate-400">
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Reads text inside photos</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Identifies specific tools and equipment</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Spots missing safety gear like helmets</div>
-                        <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Understands blueprints and diagrams</div>
+                      <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-[11px] md:text-xs text-slate-400">
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 flex-shrink-0" /> Reads text inside photos</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 flex-shrink-0" /> Identifies specific tools and equipment</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 flex-shrink-0" /> Spots missing safety gear like helmets</div>
+                        <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 flex-shrink-0" /> Understands blueprints and diagrams</div>
                       </div>
                     </div>
-                    <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-500">
-                      <span className="text-amber-500">Example Search:</span> "Show me all photos from last month where a worker wasn't wearing a safety vest."
+                    <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-[10px] md:text-xs text-slate-500 leading-relaxed">
+                      <span className="text-amber-500 block sm:inline mb-1 sm:mb-0 mr-2">Example Search:</span> "Show me all photos from last month where a worker wasn't wearing a safety vest."
                     </div>
                   </>
                 )}
@@ -271,10 +271,10 @@ const App = () => {
         </section>
 
         {/* --- Architectural Deep-Dive --- */}
-        <section id="architecture" className="py-28 bg-slate-950">
+        <section id="architecture" className="py-20 md:py-28 bg-slate-950">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// WHY IT'S SAFE & FAST</h2>
+            <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+              <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// WHY IT'S SAFE & FAST</h2>
               <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Built for Serious Businesses</h3>
               <p className="text-slate-400 text-sm md:text-base">
                 We don't use generic AI chatbots that guess answers or leak your data. Stratom is built from the ground up to be safe, fast, and 100% accurate.
@@ -313,10 +313,10 @@ const App = () => {
         </section>
 
         {/* --- Solutions By Industry --- */}
-        <section id="solutions" className="py-28 bg-slate-900/20 border-y border-slate-900">
+        <section id="solutions" className="py-20 md:py-28 bg-slate-900/20 border-y border-slate-900">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="max-w-3xl mb-20">
-              <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// WHO USES STRATOM</h2>
+            <div className="max-w-3xl mb-16 md:mb-20">
+              <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// WHO USES STRATOM</h2>
               <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Perfect for Complex Teams</h3>
               <p className="text-slate-400 text-base">
                 Stratom is built for industries that have too many files and not enough time.
@@ -361,10 +361,10 @@ const App = () => {
         </section>
 
         {/* --- Developer Console Section --- */}
-        <section id="developer" className="py-28 bg-slate-950">
-          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 items-center">
+        <section id="developer" className="py-20 md:py-28 bg-slate-950">
+          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-5">
-              <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// FOR YOUR IT TEAM</h2>
+              <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// FOR YOUR IT TEAM</h2>
               <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-6">Easy to Connect and Automate</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-8">
                 You don't have to use our dashboard if you don't want to. Stratom was built so your IT team can easily plug our smart search directly into your company's existing website, internal tools, or apps using a simple API.
@@ -372,15 +372,15 @@ const App = () => {
 
               <div className="space-y-4 text-xs font-medium text-slate-300">
                 <div className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0"></div>
                   Clean, modern API endpoints that developers love.
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0"></div>
                   Automate uploads directly from your servers.
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0"></div>
                   Detailed guides and technical support included.
                 </div>
               </div>
@@ -388,17 +388,17 @@ const App = () => {
 
             <div className="lg:col-span-7 w-full">
               <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
-                <div className="bg-slate-950/80 px-4 py-3 border-b border-slate-800/80 flex items-center justify-between">
+                <div className="bg-slate-950/80 px-4 py-3 border-b border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
                   <div className="flex items-center gap-2">
-                    <Terminal className="w-4 h-4 text-slate-500" aria-hidden="true" />
-                    <span className="font-mono text-xs text-slate-400">stratom_api_preview</span>
+                    <Terminal className="w-4 h-4 text-slate-500 flex-shrink-0" aria-hidden="true" />
+                    <span className="font-mono text-xs text-slate-400 truncate">stratom_api_preview</span>
                   </div>
-                  <div className="flex gap-2" role="tablist">
+                  <div className="flex gap-2 w-full sm:w-auto" role="tablist">
                     <button
                       role="tab"
                       aria-selected={apiMethod === 'POST'}
                       onClick={() => setApiMethod('POST')}
-                      className={`px-2.5 py-1 rounded font-mono text-[11px] font-bold ${apiMethod === 'POST' ? 'bg-cyan-950 text-cyan-400 border border-cyan-900' : 'text-slate-500'}`}
+                      className={`flex-1 sm:flex-none px-2.5 py-1.5 rounded font-mono text-[10px] sm:text-[11px] font-bold transition-colors ${apiMethod === 'POST' ? 'bg-cyan-950 text-cyan-400 border border-cyan-900' : 'text-slate-500 bg-slate-900 hover:text-slate-300'}`}
                     >
                       Upload File
                     </button>
@@ -406,16 +406,16 @@ const App = () => {
                       role="tab"
                       aria-selected={apiMethod === 'GET'}
                       onClick={() => setApiMethod('GET')}
-                      className={`px-2.5 py-1 rounded font-mono text-[11px] font-bold ${apiMethod === 'GET' ? 'bg-cyan-950 text-cyan-400 border border-cyan-900' : 'text-slate-500'}`}
+                      className={`flex-1 sm:flex-none px-2.5 py-1.5 rounded font-mono text-[10px] sm:text-[11px] font-bold transition-colors ${apiMethod === 'GET' ? 'bg-cyan-950 text-cyan-400 border border-cyan-900' : 'text-slate-500 bg-slate-900 hover:text-slate-300'}`}
                     >
                       Search Data
                     </button>
                   </div>
                 </div>
-                <div className="p-6 font-mono text-xs text-slate-300 overflow-x-auto bg-slate-950/40" aria-label="Code Snippet Preview">
+                <div className="p-4 md:p-6 font-mono text-[10px] sm:text-xs text-slate-300 overflow-x-auto bg-slate-950/40" aria-label="Code Snippet Preview">
                   <pre className="whitespace-pre"><code>{codeSnippets[apiMethod]}</code></pre>
                 </div>
-                <div className="bg-slate-950 border-t border-slate-800/80 p-4 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                <div className="bg-slate-950 border-t border-slate-800/80 p-3 md:p-4 flex items-center justify-between text-[10px] md:text-[11px] font-mono text-slate-500">
                   <span>Response: Data Received</span>
                   <span className="text-emerald-500">Status: Success</span>
                 </div>
@@ -425,13 +425,13 @@ const App = () => {
         </section>
 
         {/* --- Enterprise Security & Governance --- */}
-        <section id="governance" className="py-28 bg-slate-900/10 border-t border-slate-900">
+        <section id="governance" className="py-20 md:py-28 bg-slate-900/10 border-t border-slate-900">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-8 md:p-14 relative overflow-hidden">
+            <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6 sm:p-8 md:p-14 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-indigo-900/5 rounded-full blur-[100px] pointer-events-none"></div>
 
               <div className="max-w-3xl relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-slate-400 text-xs font-mono mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-slate-400 text-[10px] md:text-xs font-mono mb-6">
                   <Server className="w-3.5 h-3.5 text-cyan-400" aria-hidden="true" /> BANK-LEVEL SECURITY
                 </div>
 
@@ -467,14 +467,14 @@ const App = () => {
         </section>
 
         {/* --- Detailed FAQ Infrastructure --- */}
-        <section className="py-28 bg-slate-950 border-t border-slate-900">
+        <section className="py-20 md:py-28 bg-slate-950 border-t border-slate-900">
           <div className="max-w-4xl mx-auto px-6">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12 md:mb-16">
               <HelpCircle className="w-8 h-8 text-cyan-500 mx-auto mb-4" aria-hidden="true" />
               <h3 className="text-3xl font-black text-white tracking-tight">Frequently Asked Questions</h3>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {[
                 {
                   q: "What kind of files can I upload to Stratom?",
@@ -489,8 +489,8 @@ const App = () => {
                   a: "Absolutely not. We have strict privacy rules built into the software. Your data is isolated to your company alone and is never used to train public models like ChatGPT."
                 }
               ].map((faq, i) => (
-                <div key={i} className="bg-slate-900/40 border border-slate-900 p-6 rounded-xl">
-                  <h4 className="text-base font-bold text-white mb-2">{faq.q}</h4>
+                <div key={i} className="bg-slate-900/40 border border-slate-900 p-5 md:p-6 rounded-xl">
+                  <h4 className="text-sm md:text-base font-bold text-white mb-2">{faq.q}</h4>
                   <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">{faq.a}</p>
                 </div>
               ))}
@@ -500,9 +500,9 @@ const App = () => {
       </main>
 
       {/* --- Footer & Compliance Ledger --- */}
-      <footer className="bg-slate-950 pt-20 pb-10 border-t border-slate-900">
+      <footer className="bg-slate-950 pt-16 md:pt-20 pb-8 md:pb-10 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-12 gap-12 mb-16">
+          <div className="grid md:grid-cols-12 gap-10 md:gap-12 mb-12 md:mb-16">
             <div className="md:col-span-5">
               <div className="flex items-center gap-2.5 mb-5">
                 <div className="w-7 h-7 rounded bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
@@ -516,7 +516,7 @@ const App = () => {
             </div>
 
             <div className="md:col-span-3 col-span-6">
-              <h5 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Features</h5>
+              <h5 className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Features</h5>
               <ul className="space-y-2 text-xs text-slate-500">
                 <li><a href="#pipeline" className="hover:text-cyan-400 transition-colors">Smart Video Search</a></li>
                 <li><a href="#pipeline" className="hover:text-cyan-400 transition-colors">Meeting Transcripts</a></li>
@@ -526,16 +526,16 @@ const App = () => {
             </div>
 
             <div className="md:col-span-4 col-span-6">
-              <h5 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Company Details</h5>
+              <h5 className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Company Details</h5>
               <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                Registered as: STRATOM AI LTD <br />
+                Registered as: **STRATOM AI LTD** <br />
                 System Status: <span className="text-emerald-500 font-mono">All Systems Operational [100%]</span>
               </p>
             </div>
           </div>
 
-          <div className="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[10px] text-slate-600">
-            <p>&copy; {new Date().getFullYear()} STRATOM AI LTD. All rights reserved.</p>
+          <div className="border-t border-slate-900 pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[9px] md:text-[10px] text-slate-600">
+            <p className="text-center sm:text-left">&copy; {new Date().getFullYear()} STRATOM AI LTD. All rights reserved.</p>
             <div className="flex items-center gap-2">
               <Lock className="w-3 h-3 text-slate-600" aria-hidden="true" />
               <span>100% SECURE & PRIVATE</span>
