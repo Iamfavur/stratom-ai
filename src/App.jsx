@@ -528,7 +528,7 @@ const App = () => {
             <div className="md:col-span-4 col-span-6">
               <h5 className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Company Details</h5>
               <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                Registered as: **STRATOM AI LTD** <br />
+                Registered as: STRATOM AI LTD <br />
                 System Status: <span className="text-emerald-500 font-mono">All Systems Operational [100%]</span>
               </p>
             </div>
