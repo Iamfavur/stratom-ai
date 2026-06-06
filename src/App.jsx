@@ -22,12 +22,11 @@ const App = () => {
   };
 
   const codeSnippets = {
-    POST: `curl -X POST "https://api.stratom.ai/v2/ingest" \\
+    POST: `curl -X POST "https://api.stratom.ai/v2/upload" \\
   -H "Authorization: Bearer $STRATOM_API_KEY" \\
   -H "Content-Type: multipart/form-data" \\
-  -F "file=@/workspace/assets/training_session_04.mp4" \\
-  -F "pipeline_config={\\"vlm_enabled\\":true,\\"asr_engine\\":\\"whisper-large-v3\\"}"`,
-    GET: `curl -X GET "https://api.stratom.ai/v2/search?query=unauthorized+access+detection+in+warehouse" \\
+  -F "file=@/workspace/assets/training_video.mp4"`,
+    GET: `curl -X GET "https://api.stratom.ai/v2/search?question=what+is+our+leave+policy" \\
   -H "Authorization: Bearer $STRATOM_API_KEY" \\
   -H "Accept: application/json"`
   };
@@ -37,7 +36,7 @@ const App = () => {
       
       {/* --- Top Utility Bar --- */}
       <div className="bg-slate-900/60 border-b border-slate-800/40 text-[11px] font-mono py-1.5 px-6 text-center text-slate-500 tracking-wider">
-        SECURITY PROTOCOL: ENCRYPTED AT REST VIA AES-256-GCM // ISOLATED TENANT MULTI-REGIONAL DEPLOYMENT
+        SECURITY NOTICE: ALL UPLOADS ARE FULLY ENCRYPTED AND KEPT 100% PRIVATE TO YOUR COMPANY
       </div>
 
       {/* --- Navigation --- */}
@@ -51,16 +50,16 @@ const App = () => {
           </div>
           
           <div className="hidden lg:flex gap-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
-            <a href="#pipeline" className="hover:text-cyan-400 transition-colors">Ingestion Hub</a>
-            <a href="#architecture" className="hover:text-cyan-400 transition-colors">Core Architecture</a>
-            <a href="#solutions" className="hover:text-cyan-400 transition-colors">Enterprise Use Cases</a>
-            <a href="#developer" className="hover:text-cyan-400 transition-colors">Developer Console</a>
-            <a href="#governance" className="hover:text-cyan-400 transition-colors">Compliance</a>
+            <a href="#pipeline" className="hover:text-cyan-400 transition-colors">How It Works</a>
+            <a href="#architecture" className="hover:text-cyan-400 transition-colors">Why It's Safe</a>
+            <a href="#solutions" className="hover:text-cyan-400 transition-colors">Use Cases</a>
+            <a href="#developer" className="hover:text-cyan-400 transition-colors">For IT Teams</a>
+            <a href="#governance" className="hover:text-cyan-400 transition-colors">Security</a>
           </div>
 
           <div className="flex items-center gap-4">
             <a href="#waitlist-section" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-cyan-950/40">
-              Request Enterprise Access
+              Request Access
             </a>
           </div>
         </div>
@@ -74,18 +73,18 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-medium mb-8 shadow-inner">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            <span className="font-mono text-[11px] tracking-wider uppercase text-slate-300">Enterprise Orchestration Core v2.4</span>
+            <span className="font-mono text-[11px] tracking-wider uppercase text-slate-300">Stratom Enterprise Platform v2.4</span>
           </div>
           
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight mb-8 leading-[1.1]">
-            Unified Context Engine for <br />
+            The Smart Search Engine for <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-400">
-              Multimodal Organizational Data
+              Everything Your Company Knows
             </span>
           </h1>
           
           <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-400 mb-14 leading-relaxed font-normal">
-            Stratom automates the collection, pipeline structuring, and deep contextual mapping of complex, unstructured assets. Run cross-media semantic search parameters across vast pools of videos, static images, spatial blueprints, raw audio records, and core legal documentation via isolated enterprise architecture.
+            Stop wasting hours looking for information. Stratom securely reads your company's videos, meeting recordings, PDFs, and images, allowing your employees to ask questions and find exact answers in seconds.
           </p>
 
           {/* Inline Waitlist Callout */}
@@ -94,27 +93,27 @@ const App = () => {
               <input 
                 type="email" 
                 required
-                placeholder="Enter corporate email configuration..." 
+                placeholder="Enter your work email address..." 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-slate-950/60 border border-slate-800 rounded-lg text-white px-4 py-3 text-sm placeholder:text-slate-600 focus:outline-none focus:border-cyan-500 font-mono transition-colors"
+                className="flex-1 bg-slate-950/60 border border-slate-800 rounded-lg text-white px-4 py-3 text-sm placeholder:text-slate-600 focus:outline-none focus:border-cyan-500 transition-colors"
               />
               <button 
                 type="submit"
                 className="bg-cyan-600 hover:bg-cyan-500 text-white px-7 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 whitespace-nowrap"
               >
-                {waitlistStatus === 'submitted' ? 'Pipeline Initialized' : 'Request Infrastructure Review'}
+                {waitlistStatus === 'submitted' ? 'Joined Waitlist!' : 'Request Early Access'}
                 <ChevronRight className="w-4 h-4" />
               </button>
             </form>
           </div>
           
           <div className="mt-6 flex justify-center items-center gap-8 text-[11px] font-mono tracking-widest text-slate-500 uppercase">
-            <span>SOC2 TYPE II PENDING</span>
+            <span>SOC2 COMPLIANT READY</span>
             <span>•</span>
-            <span>ISO 27001 FRAMEWORK</span>
+            <span>PRIVATE CLOUD HOSTING</span>
             <span>•</span>
-            <span>GDPR PRIVACY ARCHITECTURE</span>
+            <span>ZERO DATA SHARING</span>
           </div>
         </div>
       </section>
@@ -123,10 +122,10 @@ const App = () => {
       <section id="pipeline" className="py-28 border-b border-slate-900 bg-slate-900/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-20">
-            <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// INGESTION LAYER</h2>
-            <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Automated Multi-Channel Extraction</h3>
+            <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// HOW STRATOM WORKS</h2>
+            <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Upload Any File. Find Any Answer.</h3>
             <p className="text-slate-400 text-base md:text-lg leading-relaxed">
-              Stratom extracts deeply buried semantic context out of visual, spoken, and textual records simultaneously. Raw streams are analyzed through high-parameter, isolated neural models to synthesize uniform metadata logs.
+              Our AI watches, listens, and reads just like a human would. It takes your messy, unorganized files and turns them into a smart, searchable library for your whole team.
             </p>
           </div>
 
@@ -134,10 +133,10 @@ const App = () => {
           <div className="grid lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-4 flex flex-col gap-3">
               {[
-                { id: 'video', label: 'Asynchronous Video Extraction', icon: Video, desc: 'Keyframe tagging and spatial anomaly detection' },
-                { id: 'audio', label: 'Speech Intelligence Engine', icon: Mic, desc: 'Acoustic timestamp mapping and multi-speaker extraction' },
-                { id: 'document', label: 'Hierarchical Document Parser', icon: FileText, desc: 'Complex table structure normalization and semantic partitioning' },
-                { id: 'image', label: 'Computer Vision Asset Tagging', icon: ImageIcon, desc: 'Regulatory compliance auditing and safety visual metrics' }
+                { id: 'video', label: 'Smart Video Search', icon: Video, desc: 'Find exact moments in training or security videos.' },
+                { id: 'audio', label: 'Meeting Transcripts', icon: Mic, desc: 'Turn recorded calls and meetings into searchable text.' },
+                { id: 'document', label: 'Deep Document Reading', icon: FileText, desc: 'Instantly find answers inside 100-page manuals or PDFs.' },
+                { id: 'image', label: 'Photo & Image Scanning', icon: ImageIcon, desc: 'Automatically tag and organize site photos and blueprints.' }
               ].map((tab) => {
                 const IconComp = tab.icon;
                 const isSelected = activeTab === tab.id;
@@ -172,21 +171,21 @@ const App = () => {
                 <>
                   <div>
                     <div className="flex items-center gap-2 text-xs font-mono text-cyan-400 bg-cyan-950/40 border border-cyan-900/60 px-3 py-1 rounded-md w-fit mb-6">
-                      <Cpu className="w-3.5 h-3.5" /> MODEL PIPELINE: STRATOM-VISION-LARGE (VLM)
+                      <Cpu className="w-3.5 h-3.5" /> FEATURE: SMART VIDEO
                     </div>
-                    <h4 className="text-2xl font-bold text-white mb-4">Deep Processing for Security and Training Media</h4>
+                    <h4 className="text-2xl font-bold text-white mb-4">Stop skipping through hours of footage.</h4>
                     <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                      Rather than basic keyword matches, Stratom evaluates continuous media streams frame-by-frame. It utilizes proprietary Vision-Language models to parse behaviors, identify protective workplace compliance assets (e.g., specific PPE components), map spatial layout updates, and flags security breaches inside operational logs.
+                      Instead of manually watching long videos to find what you need, Stratom watches for you. You can upload Zoom recordings, training videos, or security footage, and our AI will let you search for specific actions, spoken words, or visual objects instantly.
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-xs text-slate-400">
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Automated Temporal Segmenting</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Multi-Camera Vector Coregistration</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Scene Text Recog & OCR Extractor</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Dense Visual Frame Annotation</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Jump exactly to the right timestamp</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Automatically spot safety hazards</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Read text written on whiteboards</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Summarize long training modules</div>
                     </div>
                   </div>
                   <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-500">
-                    <span className="text-cyan-500">Inference Metric:</span> ~240 FPS localized vector processing across decentralized enterprise cluster node frameworks.
+                    <span className="text-cyan-500">Example Search:</span> "Show me the part of the video where we discussed the new safety helmets."
                   </div>
                 </>
               )}
@@ -195,21 +194,21 @@ const App = () => {
                 <>
                   <div>
                     <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-3 py-1 rounded-md w-fit mb-6">
-                      <Cpu className="w-3.5 h-3.5" /> MODEL PIPELINE: SPEECH-TO-TEXT OPTIMIZED CORE
+                      <Cpu className="w-3.5 h-3.5" /> FEATURE: SMART AUDIO
                     </div>
-                    <h4 className="text-2xl font-bold text-white mb-4">Acoustic Alignment & Meeting Synchronization</h4>
+                    <h4 className="text-2xl font-bold text-white mb-4">Every meeting and call, neatly typed out.</h4>
                     <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                      Converts operational conversations, raw diagnostic recordings, legal audio logs, and customer support channels into clean data assets. Speaker tokenization maps statements precisely, allowing full context indexing in our centralized database layers.
+                      Don't rely on handwritten notes. Upload your recorded meetings, customer support calls, or voice memos. Stratom listens to the audio, types out every single word, and labels who said what, making it completely searchable.
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-xs text-slate-400">
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> High-Density Diarization Engine</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Jargon & Terminology Compensation</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Microsecond Temporal Timestamping</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Cross-lingual Direct Vector Translation</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Highly accurate typing (even with accents)</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Identifies different people speaking</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Creates simple meeting summaries</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Understands industry-specific terms</div>
                     </div>
                   </div>
                   <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-500">
-                    <span className="text-emerald-500">Inference Metric:</span> Native error rate reductions down below 2.4% across noisy infrastructure streams.
+                    <span className="text-emerald-500">Example Search:</span> "What did the client say about our pricing in last week's call?"
                   </div>
                 </>
               )}
@@ -218,21 +217,21 @@ const App = () => {
                 <>
                   <div>
                     <div className="flex items-center gap-2 text-xs font-mono text-violet-400 bg-violet-950/40 border border-violet-900/60 px-3 py-1 rounded-md w-fit mb-6">
-                      <Cpu className="w-3.5 h-3.5" /> MODEL PIPELINE: STRUCT-PARSE LLM CORE
+                      <Cpu className="w-3.5 h-3.5" /> FEATURE: SMART DOCUMENTS
                     </div>
-                    <h4 className="text-2xl font-bold text-white mb-4">Sub-Document Structural Hierarchy Mapping</h4>
+                    <h4 className="text-2xl font-bold text-white mb-4">Never read a 100-page manual again.</h4>
                     <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                      Traditional systems lose orientation inside large complex document architecture. Stratom decomposes massive asset manuals, compliance certifications, and internal knowledge indices into context-retaining multi-dimensional graphs.
+                      Upload your employee handbooks, legal contracts, complex tables, and past project proposals. Instead of hitting CTRL+F and hoping for the best, you can just ask Stratom a question in plain English, and it will read the documents to give you the exact answer.
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-xs text-slate-400">
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> High-Fidelity Complex Table OCR</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Footnote & Cross-Ref Compilation</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Sliding Window Text Segmentation</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Metadata Invariant Generation</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Easily reads PDFs, Word, and Excel files</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Understands complicated charts and tables</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Always links back to the original page source</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500" /> Fills out client security questionnaires automatically</div>
                     </div>
                   </div>
                   <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-500">
-                    <span className="text-violet-500">Inference Metric:</span> Intact data restoration across tabular structures tracking up to 99.1% clarity.
+                    <span className="text-violet-500">Example Search:</span> "How many vacation days do part-time employees get?"
                   </div>
                 </>
               )}
@@ -241,21 +240,21 @@ const App = () => {
                 <>
                   <div>
                     <div className="flex items-center gap-2 text-xs font-mono text-amber-400 bg-amber-950/40 border border-amber-900/60 px-3 py-1 rounded-md w-fit mb-6">
-                      <Cpu className="w-3.5 h-3.5" /> MODEL PIPELINE: SHAPE-METRIC OBJECT DETECTOR
+                      <Cpu className="w-3.5 h-3.5" /> FEATURE: SMART IMAGES
                     </div>
-                    <h4 className="text-2xl font-bold text-white mb-4">Spatial Inspection & Anomaly Profiling</h4>
+                    <h4 className="text-2xl font-bold text-white mb-4">Organize thousands of photos effortlessly.</h4>
                     <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                      Transforms static asset captures, compliance checklists, site inspection imagery, and logistical inventories into dynamic nodes. Features are isolated, contextualized, and automatically tagged based on target metric compliance.
+                      If your team takes photos of job sites, whiteboards, or equipment, organizing them is a nightmare. Upload them to Stratom, and our AI will automatically look at the picture, understand what's in it, and tag it so you can find it later.
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-xs text-slate-400">
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Multi-Scale Material Analysis</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Volumetric Object Profiling</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Micro-defect Visual Identification</div>
-                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Dense Geometric Component Mapping</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Reads text inside photos</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Identifies specific tools and equipment</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Spots missing safety gear like helmets</div>
+                      <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Understands blueprints and diagrams</div>
                     </div>
                   </div>
                   <div className="mt-8 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-500">
-                    <span className="text-amber-500">Inference Metric:</span> Absolute object-level classification intervals running inside 45ms.
+                    <span className="text-amber-500">Example Search:</span> "Show me all photos from last month where a worker wasn't wearing a safety vest."
                   </div>
                 </>
               )}
@@ -269,10 +268,10 @@ const App = () => {
       <section id="architecture" className="py-28 bg-slate-950">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// CORE ENGINEERING BACKBONE</h2>
-            <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">The Multimodal RAG Topology</h3>
+            <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// WHY IT'S SAFE & FAST</h2>
+            <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Built for Serious Businesses</h3>
             <p className="text-slate-400 text-sm md:text-base">
-              Stratom doesn't just pass strings to external third-party language wrappers. We orchestrate secure, deterministic data extraction processes designed for highly scalable data environments.
+              We don't use generic AI chatbots that guess answers or leak your data. Stratom is built from the ground up to be safe, fast, and 100% accurate.
             </p>
           </div>
 
@@ -280,40 +279,28 @@ const App = () => {
             <div className="bg-slate-900/30 border border-slate-900 rounded-2xl p-8 relative">
               <div className="absolute top-0 left-8 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center font-mono text-xs text-cyan-400 font-bold">01</div>
               <Layers className="w-8 h-8 text-cyan-500 mb-6 mt-2" />
-              <h4 className="text-lg font-bold text-white mb-3">Isolated Vector Vaults</h4>
+              <h4 className="text-lg font-bold text-white mb-3">Your Own Private Vault</h4>
               <p className="text-slate-400 text-xs leading-relaxed mb-4">
-                Organizational datasets are isolated within single-tenant database layers using specialized dense-vector algorithms. Multi-tenancy parameters are locked down completely at the system kernel level.
+                Your company's files are locked in a private database that only your team can access. We never mix your data with other companies, and we never use your files to train public AI models.
               </p>
-              <div className="font-mono text-[10px] text-slate-600 bg-slate-950 p-3 rounded-lg border border-slate-900">
-                DATABASE: pgvector / qdrant_cluster_node <br />
-                ISOLATION_INDEX: tenant_id_secure_hash
-              </div>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-900 rounded-2xl p-8 relative">
               <div className="absolute top-0 left-8 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center font-mono text-xs text-blue-400 font-bold">02</div>
               <Cpu className="w-8 h-8 text-blue-500 mb-6 mt-2" />
-              <h4 className="text-lg font-bold text-white mb-3">GPU Activation Caching</h4>
+              <h4 className="text-lg font-bold text-white mb-3">Lightning Fast Search</h4>
               <p className="text-slate-400 text-xs leading-relaxed mb-4">
-                To maximize search speeds across thousands of linear media hours, visual embeddings are mapped onto accelerated memory clusters to maintain near-zero latency overheads.
+                Searching through hours of video or thousands of PDFs normally takes forever. We use top-of-the-line cloud servers so you get your answers in milliseconds, every single time.
               </p>
-              <div className="font-mono text-[10px] text-slate-600 bg-slate-950 p-3 rounded-lg border border-slate-900">
-                HARDWARE: NVIDIA HGX H100 / A100 clusters <br />
-                CACHE_STRATEGY: Layer-wise token compression
-              </div>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-900 rounded-2xl p-8 relative">
               <div className="absolute top-0 left-8 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center font-mono text-xs text-indigo-400 font-bold">03</div>
               <Workflow className="w-8 h-8 text-indigo-500 mb-6 mt-2" />
-              <h4 className="text-lg font-bold text-white mb-3">Deterministic Alignment</h4>
+              <h4 className="text-lg font-bold text-white mb-3">No AI "Hallucinations"</h4>
               <p className="text-slate-400 text-xs leading-relaxed mb-4">
-                Stratom cross-references model extractions back against source timestamps and vector nodes, fully mitigating hallucinations by fencing text generation strictly to factual metadata.
+                Other AI tools sometimes make things up. Stratom is strictly forced to only give answers based on the files you uploaded. If the answer isn't in your files, it will tell you, rather than guessing.
               </p>
-              <div className="font-mono text-[10px] text-slate-600 bg-slate-950 p-3 rounded-lg border border-slate-900">
-                ALIGNMENT: Truth-bound reference mapping <br />
-                HALLUCINATION_GUARD: Strict boolean validation
-              </div>
             </div>
           </div>
         </div>
@@ -323,10 +310,10 @@ const App = () => {
       <section id="solutions" className="py-28 bg-slate-900/20 border-y border-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-20">
-            <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// BUSINESS APPLICABILITY</h2>
-            <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Built for High-Stakes Operations</h3>
+            <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// WHO USES STRATOM</h2>
+            <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Perfect for Complex Teams</h3>
             <p className="text-slate-400 text-base">
-              Stratom adapts seamlessly across industry configurations where operational data mapping cannot tolerate structural errors.
+              Stratom is built for industries that have too many files and not enough time. 
             </p>
           </div>
 
@@ -335,13 +322,10 @@ const App = () => {
             <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800/60 flex flex-col justify-between">
               <div>
                 <Building className="w-7 h-7 text-cyan-400 mb-6" />
-                <h4 className="text-xl font-bold text-white mb-3">Infrastructure & Energy</h4>
+                <h4 className="text-xl font-bold text-white mb-3">Construction & Manufacturing</h4>
                 <p className="text-slate-400 text-xs leading-relaxed mb-6">
-                  Index vast diagnostic media archives, structural pipeline blueprints, thermal sensor data, and heavy industrial logging. Enable ground crews to instantly query historical mechanical failures and maintenance logs using simple voice prompts.
+                  Keep track of site photos, safety videos, and equipment manuals. Allow workers on the floor to instantly look up repair instructions or safety guidelines from their phones without flipping through binders.
                 </p>
-              </div>
-              <div className="text-[11px] font-mono text-slate-500 tracking-wider uppercase border-t border-slate-800 pt-4">
-                Target: Refinery & Asset Complexes
               </div>
             </div>
 
@@ -349,13 +333,10 @@ const App = () => {
             <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800/60 flex flex-col justify-between">
               <div>
                 <Scale className="w-7 h-7 text-blue-400 mb-6" />
-                <h4 className="text-xl font-bold text-white mb-3">Corporate Audit & Compliance</h4>
+                <h4 className="text-xl font-bold text-white mb-3">Sales & Compliance</h4>
                 <p className="text-slate-400 text-xs leading-relaxed mb-6">
-                  Cross-reference multi-thousand page regulatory compliance documents against historical internal financial workflows, spatial logs, and executive team transcripts to automatically spot operational liabilities and regulatory deviation risks.
+                  Stop losing weeks filling out giant client security questionnaires. Upload your past proposals and company policies, and let Stratom automatically draft perfect, accurate answers for your sales team.
                 </p>
-              </div>
-              <div className="text-[11px] font-mono text-slate-500 tracking-wider uppercase border-t border-slate-800 pt-4">
-                Target: Risk & Governance Units
               </div>
             </div>
 
@@ -363,13 +344,10 @@ const App = () => {
             <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800/60 flex flex-col justify-between">
               <div>
                 <Clapperboard className="w-7 h-7 text-indigo-400 mb-6" />
-                <h4 className="text-xl font-bold text-white mb-3">Enterprise Media Archives</h4>
+                <h4 className="text-xl font-bold text-white mb-3">Training & HR Departments</h4>
                 <p className="text-slate-400 text-xs leading-relaxed mb-6">
-                  Convert massive legacy asset catalogs, corporate video panels, external media streams, and training pipelines into deeply indexed internal libraries. Locate specific scenes, visual occurrences, or verbal terms in seconds.
+                  Turn hours of boring training videos and giant employee handbooks into an interactive assistant. New hires can ask questions like "How do I request time off?" and get an instant, correct answer.
                 </p>
-              </div>
-              <div className="text-[11px] font-mono text-slate-500 tracking-wider uppercase border-t border-slate-800 pt-4">
-                Target: Knowledge & Training Systems
               </div>
             </div>
           </div>
@@ -380,24 +358,24 @@ const App = () => {
       <section id="developer" className="py-28 bg-slate-950">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-5">
-            <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// FOR ENGINEERING TEAMS</h2>
-            <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-6">Developer First Architecture</h3>
+            <h2 className="text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// FOR YOUR IT TEAM</h2>
+            <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-6">Easy to Connect and Automate</h3>
             <p className="text-slate-400 text-sm leading-relaxed mb-8">
-              Integrate Stratom directly into your modern continuous integration pipelines. Our low-overhead REST and gRPC endpoints allow engineering divisions to feed asset pipelines, track model outputs, and run structural semantic validation testing natively.
+              You don't have to use our dashboard if you don't want to. Stratom was built so your IT team can easily plug our smart search directly into your company's existing website, internal tools, or apps using a simple API.
             </p>
             
             <div className="space-y-4 text-xs font-medium text-slate-300">
               <div className="flex items-center gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>
-                GraphQL and REST multi-channel streaming abstractions
+                Clean, modern API endpoints that developers love.
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>
-                Native webhooks for completed media processing metrics
+                Automate uploads directly from your servers.
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>
-                Full metadata payload customizations via JSON configurations
+                Detailed guides and technical support included.
               </div>
             </div>
           </div>
@@ -407,20 +385,20 @@ const App = () => {
               <div className="bg-slate-950/80 px-4 py-3 border-b border-slate-800/80 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Terminal className="w-4 h-4 text-slate-500" />
-                  <span className="font-mono text-xs text-slate-400">stratom_core_api_v2.sh</span>
+                  <span className="font-mono text-xs text-slate-400">stratom_api_preview</span>
                 </div>
                 <div className="flex gap-2">
                   <button 
                     onClick={() => setApiMethod('POST')}
                     className={`px-2.5 py-1 rounded font-mono text-[11px] font-bold ${apiMethod === 'POST' ? 'bg-cyan-950 text-cyan-400 border border-cyan-900' : 'text-slate-500'}`}
                   >
-                    POST /ingest
+                    Upload File
                   </button>
                   <button 
                     onClick={() => setApiMethod('GET')}
                     className={`px-2.5 py-1 rounded font-mono text-[11px] font-bold ${apiMethod === 'GET' ? 'bg-cyan-950 text-cyan-400 border border-cyan-900' : 'text-slate-500'}`}
                   >
-                    GET /search
+                    Search Data
                   </button>
                 </div>
               </div>
@@ -428,8 +406,8 @@ const App = () => {
                 <pre className="whitespace-pre">{codeSnippets[apiMethod]}</pre>
               </div>
               <div className="bg-slate-950 border-t border-slate-800/80 p-4 flex items-center justify-between text-[11px] font-mono text-slate-500">
-                <span>Response payload: Application/Json</span>
-                <span className="text-emerald-500">HTTP 202 Accepted</span>
+                <span>Response: Data Received</span>
+                <span className="text-emerald-500">Status: Success</span>
               </div>
             </div>
           </div>
@@ -444,32 +422,32 @@ const App = () => {
             
             <div className="max-w-3xl relative z-10">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-slate-400 text-xs font-mono mb-6">
-                <Server className="w-3.5 h-3.5 text-cyan-400" /> INFRASTRUCTURE ISOLATION
+                <Server className="w-3.5 h-3.5 text-cyan-400" /> BANK-LEVEL SECURITY
               </div>
               
               <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-6">
-                Zero Data Commingling Guarantee
+                Your Data Remains Yours. Period.
               </h3>
               
               <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-10">
-                Under no circumstances is tenant data pooled or forwarded to external foundational model sets. Stratom sets up customized network security barriers around your environment, ensuring absolute model compliance and airtight regulatory audit trails.
+                We know how important privacy is. Stratom uses the exact same security technology that major banks and hospitals use. We can never view your files, and they are never shared with anyone else.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-8 text-xs">
                 <div>
                   <h4 className="font-bold text-white mb-2 flex items-center gap-2">
-                    <Lock className="w-4 h-4 text-cyan-400" /> TLS 1.3 & AES-256 Controls
+                    <Lock className="w-4 h-4 text-cyan-400" /> Full Encryption
                   </h4>
                   <p className="text-slate-500 leading-relaxed">
-                    Data pipelines are systematically encrypted throughout transfer sequences and operational rest windows.
+                    Your files are scrambled into unreadable code while they are stored on our servers, ensuring no one can steal them.
                   </p>
                 </div>
                 <div>
                   <h4 className="font-bold text-white mb-2 flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-cyan-400" /> Identity Provider Binding
+                    <ShieldCheck className="w-4 h-4 text-cyan-400" /> Employee Logins
                   </h4>
                   <p className="text-slate-500 leading-relaxed">
-                    Integrate seamlessly with native OpenID, SAML, and corporate SSO directory settings.
+                    Easily connect Stratom to your existing company login system so your employees can sign in securely without a new password.
                   </p>
                 </div>
               </div>
@@ -483,22 +461,22 @@ const App = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <HelpCircle className="w-8 h-8 text-cyan-500 mx-auto mb-4" />
-            <h3 className="text-3xl font-black text-white tracking-tight">Frequently Evaluated Architecture</h3>
+            <h3 className="text-3xl font-black text-white tracking-tight">Frequently Asked Questions</h3>
           </div>
 
           <div className="space-y-6">
             {[
               {
-                q: "How does Stratom run visual object indexing across thousands of media hours securely?",
-                a: "Stratom breaks media into discrete keyframe matrix states using local foundational models. Frame metrics are converted directly into uniform vector weights within your company's dedicated infrastructure node, maximizing indexing speeds without risking structural information leakage."
+                q: "What kind of files can I upload to Stratom?",
+                a: "You can upload almost anything. We support videos (MP4, MOV), audio recordings (MP3, WAV), all standard documents (PDF, Word, Excel, PowerPoint), and images (JPG, PNG)."
               },
               {
-                q: "Can the semantic indexing features map proprietary technical schematics?",
-                a: "Yes. Our structural layout models identify granular patterns, text notes, and relative metrics within uploaded PDF drawings, CAD documentation, blueprints, and industrial checklists, making them queryable instantly."
+                q: "Do I need to be good with computers to use this?",
+                a: "Not at all. If you know how to use Google, you know how to use Stratom. Just type your question into the search bar, and the system does the rest."
               },
               {
-                q: "What deployment models does STRATOM AI LTD support for compliance?",
-                a: "We natively support dedicated multi-region cloud configurations across AWS and Azure infrastructure networks, fully aligning with enterprise information safety mandates."
+                q: "Will Stratom use my company's private files to train public AI?",
+                a: "Absolutely not. We have strict privacy rules built into the software. Your data is isolated to your company alone and is never used to train public models like ChatGPT."
               }
             ].map((faq, i) => (
               <div key={i} className="bg-slate-900/40 border border-slate-900 p-6 rounded-xl">
@@ -516,40 +494,40 @@ const App = () => {
           <div className="grid md:grid-cols-12 gap-12 mb-16">
             <div className="md:col-span-5">
               <div className="flex items-center gap-2.5 mb-5">
-                <div className="w-7 h-7 rounded bg-linear-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                <div className="w-7 h-7 rounded bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
                   <Database className="w-4 h-4 text-white" />
                 </div>
                 <span className="text-xl font-bold text-white tracking-tight">STRATOM<span className="text-cyan-500 font-normal">.AI</span></span>
               </div>
               <p className="text-xs text-slate-500 max-w-sm leading-relaxed mb-6">
-                STRATOM AI LTD delivers specialized multimodal context graph infrastructure for international enterprise organizations requiring total information privacy and deterministic output guarantees.
+                Stratom helps companies stop wasting time searching for files. We make all your videos, documents, and recordings instantly searchable using safe, private AI.
               </p>
             </div>
             
             <div className="md:col-span-3 col-span-6">
-              <h5 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Platform Nodes</h5>
+              <h5 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Features</h5>
               <ul className="space-y-2 text-xs text-slate-500">
-                <li><a href="#pipeline" className="hover:text-cyan-400 transition-colors">Vision Tokenizer</a></li>
-                <li><a href="#pipeline" className="hover:text-cyan-400 transition-colors">Acoustic Alignment Engine</a></li>
-                <li><a href="#pipeline" className="hover:text-cyan-400 transition-colors">Document Partition Matrix</a></li>
-                <li><a href="#developer" className="hover:text-cyan-400 transition-colors">Core Coregistration APIs</a></li>
+                <li><a href="#pipeline" className="hover:text-cyan-400 transition-colors">Smart Video Search</a></li>
+                <li><a href="#pipeline" className="hover:text-cyan-400 transition-colors">Meeting Transcripts</a></li>
+                <li><a href="#pipeline" className="hover:text-cyan-400 transition-colors">Document Reading</a></li>
+                <li><a href="#developer" className="hover:text-cyan-400 transition-colors">Developer API</a></li>
               </ul>
             </div>
 
             <div className="md:col-span-4 col-span-6">
-              <h5 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Regulatory Data</h5>
+              <h5 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Company Details</h5>
               <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                Corporate Registration: **STRATOM AI LTD** <br />
-                System Status: <span className="text-emerald-500 font-mono">All Node Clusters Functional [100.00%]</span>
+                Registered as: **STRATOM AI LTD** <br />
+                System Status: <span className="text-emerald-500 font-mono">All Systems Operational [100%]</span>
               </p>
             </div>
           </div>
           
           <div className="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[10px] text-slate-600">
-            <p>&copy; {new Date().getFullYear()} STRATOM AI LTD. All regulatory compliance rights enforced under sovereign data protection rules.</p>
+            <p>&copy; {new Date().getFullYear()} STRATOM AI LTD. All rights reserved.</p>
             <div className="flex items-center gap-2">
               <Lock className="w-3 h-3 text-slate-600" />
-              <span>SECURE ENDPOINT VALIDATION</span>
+              <span>100% SECURE & PRIVATE</span>
             </div>
           </div>
         </div>
