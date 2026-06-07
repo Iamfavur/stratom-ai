@@ -22,12 +22,12 @@ const App = () => {
   };
 
   const codeSnippets = {
-    POST: `curl -X POST "https://api.stratom.ai/v2/upload" \\
-  -H "Authorization: Bearer $STRATOM_API_KEY" \\
+    POST: `curl -X POST "https://api.straton.ai/v2/upload" \\
+  -H "Authorization: Bearer $STRATON_API_KEY" \\
   -H "Content-Type: multipart/form-data" \\
   -F "file=@/workspace/assets/training_video.mp4"`,
-    GET: `curl -X GET "https://api.stratom.ai/v2/search?question=what+is+our+leave+policy" \\
-  -H "Authorization: Bearer $STRATOM_API_KEY" \\
+    GET: `curl -X GET "https://api.straton.ai/v2/search?question=what+is+our+leave+policy" \\
+  -H "Authorization: Bearer $STRATON_API_KEY" \\
   -H "Accept: application/json"`
   };
 
@@ -42,11 +42,11 @@ const App = () => {
       {/* --- Navigation --- */}
       <header className="sticky top-0 w-full z-50 border-b border-slate-900 bg-slate-950/70 backdrop-blur-xl">
         <nav className="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between" aria-label="Main Navigation">
-          <a href="/" className="flex items-center gap-2 md:gap-2.5" aria-label="Stratom AI Home">
+          <a href="/" className="flex items-center gap-2 md:gap-2.5" aria-label="Straton AI Home">
             <div className="w-7 h-7 md:w-9 md:h-9 rounded-lg bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-700 flex items-center justify-center shadow-lg shadow-cyan-950/50 flex-shrink-0">
               <Database className="w-4 h-4 md:w-5 md:h-5 text-white" aria-hidden="true" />
             </div>
-            <span className="text-lg md:text-2xl font-black text-white tracking-tight">STRATOM<span className="text-cyan-500 font-medium">.AI</span></span>
+            <span className="text-lg md:text-2xl font-black text-white tracking-tight">STRATON<span className="text-cyan-500 font-medium">.AI</span></span>
           </a>
 
           <div className="hidden lg:flex gap-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
@@ -74,7 +74,7 @@ const App = () => {
           <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-[10px] md:text-xs font-medium mb-8 shadow-inner">
               <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-              <span className="font-mono tracking-wider uppercase text-slate-300">Stratom Enterprise Platform v2.4</span>
+              <span className="font-mono tracking-wider uppercase text-slate-300">Straton Enterprise Platform v2.4</span>
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight mb-8 leading-[1.1]">
@@ -85,7 +85,7 @@ const App = () => {
             </h1>
 
             <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-400 mb-10 md:mb-14 leading-relaxed font-normal">
-              Stop wasting hours looking for information. Stratom securely reads your company's videos, meeting recordings, PDFs, and images, allowing your employees to ask questions and find exact answers in seconds.
+              Stop wasting hours looking for information. Straton securely reads your company's videos, meeting recordings, PDFs, and images, allowing your employees to ask questions and find exact answers in seconds.
             </p>
 
             {/* Inline Waitlist Callout */}
@@ -126,7 +126,7 @@ const App = () => {
         <section id="pipeline" className="py-20 md:py-28 border-b border-slate-900 bg-slate-900/10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mb-12 md:mb-20">
-              <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// HOW STRATOM WORKS</h2>
+              <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// HOW STRATON WORKS</h2>
               <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Upload Any File. Find Any Answer.</h3>
               <p className="text-slate-400 text-base md:text-lg leading-relaxed">
                 Our AI watches, listens, and reads just like a human would. It takes your messy, unorganized files and turns them into a smart, searchable library for your whole team.
@@ -181,7 +181,7 @@ const App = () => {
                       </div>
                       <h4 className="text-xl md:text-2xl font-bold text-white mb-4">Stop skipping through hours of footage.</h4>
                       <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
-                        Instead of manually watching long videos to find what you need, Stratom watches for you. You can upload Zoom recordings, training videos, or security footage, and our AI will let you search for specific actions, spoken words, or visual objects instantly.
+                        Instead of manually watching long videos to find what you need, Straton watches for you. You can upload Zoom recordings, training videos, or security footage, and our AI will let you search for specific actions, spoken words, or visual objects instantly.
                       </p>
                       <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-[11px] md:text-xs text-slate-400">
                         <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500 flex-shrink-0" /> Jump exactly to the right timestamp</div>
@@ -204,7 +204,7 @@ const App = () => {
                       </div>
                       <h4 className="text-xl md:text-2xl font-bold text-white mb-4">Every meeting and call, neatly typed out.</h4>
                       <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
-                        Don't rely on handwritten notes. Upload your recorded meetings, customer support calls, or voice memos. Stratom listens to the audio, types out every single word, and labels who said what, making it completely searchable.
+                        Don't rely on handwritten notes. Upload your recorded meetings, customer support calls, or voice memos. Straton listens to the audio, types out every single word, and labels who said what, making it completely searchable.
                       </p>
                       <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-[11px] md:text-xs text-slate-400">
                         <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Highly accurate typing (even with accents)</div>
@@ -227,7 +227,7 @@ const App = () => {
                       </div>
                       <h4 className="text-xl md:text-2xl font-bold text-white mb-4">Never read a 100-page manual again.</h4>
                       <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
-                        Upload your employee handbooks, legal contracts, complex tables, and past project proposals. Instead of hitting CTRL+F and hoping for the best, you can just ask Stratom a question in plain English, and it will read the documents to give you the exact answer.
+                        Upload your employee handbooks, legal contracts, complex tables, and past project proposals. Instead of hitting CTRL+F and hoping for the best, you can just ask Straton a question in plain English, and it will read the documents to give you the exact answer.
                       </p>
                       <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-[11px] md:text-xs text-slate-400">
                         <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-violet-500 flex-shrink-0" /> Easily reads PDFs, Word, and Excel files</div>
@@ -250,7 +250,7 @@ const App = () => {
                       </div>
                       <h4 className="text-xl md:text-2xl font-bold text-white mb-4">Organize thousands of photos effortlessly.</h4>
                       <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
-                        If your team takes photos of job sites, whiteboards, or equipment, organizing them is a nightmare. Upload them to Stratom, and our AI will automatically look at the picture, understand what's in it, and tag it so you can find it later.
+                        If your team takes photos of job sites, whiteboards, or equipment, organizing them is a nightmare. Upload them to Straton, and our AI will automatically look at the picture, understand what's in it, and tag it so you can find it later.
                       </p>
                       <div className="grid sm:grid-cols-2 gap-4 border-t border-slate-800/80 pt-6 text-[11px] md:text-xs text-slate-400">
                         <div className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 flex-shrink-0" /> Reads text inside photos</div>
@@ -277,7 +277,7 @@ const App = () => {
               <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// WHY IT'S SAFE & FAST</h2>
               <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Built for Serious Businesses</h3>
               <p className="text-slate-400 text-sm md:text-base">
-                We don't use generic AI chatbots that guess answers or leak your data. Stratom is built from the ground up to be safe, fast, and 100% accurate.
+                We don't use generic AI chatbots that guess answers or leak your data. Straton is built from the ground up to be safe, fast, and 100% accurate.
               </p>
             </div>
 
@@ -305,7 +305,7 @@ const App = () => {
                 <Workflow className="w-8 h-8 text-indigo-500 mb-6 mt-2" aria-hidden="true" />
                 <h4 className="text-lg font-bold text-white mb-3">No AI "Hallucinations"</h4>
                 <p className="text-slate-400 text-xs leading-relaxed mb-4">
-                  Other AI tools sometimes make things up. Stratom is strictly forced to only give answers based on the files you uploaded. If the answer isn't in your files, it will tell you, rather than guessing.
+                  Other AI tools sometimes make things up. Straton is strictly forced to only give answers based on the files you uploaded. If the answer isn't in your files, it will tell you, rather than guessing.
                 </p>
               </div>
             </div>
@@ -316,10 +316,10 @@ const App = () => {
         <section id="solutions" className="py-20 md:py-28 bg-slate-900/20 border-y border-slate-900">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mb-16 md:mb-20">
-              <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// WHO USES STRATOM</h2>
+              <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// WHO USES STRATON</h2>
               <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-5">Perfect for Complex Teams</h3>
               <p className="text-slate-400 text-base">
-                Stratom is built for industries that have too many files and not enough time.
+                Straton is built for industries that have too many files and not enough time.
               </p>
             </div>
 
@@ -341,7 +341,7 @@ const App = () => {
                   <Scale className="w-7 h-7 text-blue-400 mb-6" aria-hidden="true" />
                   <h4 className="text-xl font-bold text-white mb-3">Sales & Compliance</h4>
                   <p className="text-slate-400 text-xs leading-relaxed mb-6">
-                    Stop losing weeks filling out giant client security questionnaires. Upload your past proposals and company policies, and let Stratom automatically draft perfect, accurate answers for your sales team.
+                    Stop losing weeks filling out giant client security questionnaires. Upload your past proposals and company policies, and let Straton automatically draft perfect, accurate answers for your sales team.
                   </p>
                 </div>
               </div>
@@ -367,7 +367,7 @@ const App = () => {
               <h2 className="text-[10px] md:text-xs font-bold uppercase text-cyan-500 tracking-widest mb-3 font-mono">// FOR YOUR IT TEAM</h2>
               <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-6">Easy to Connect and Automate</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-8">
-                You don't have to use our dashboard if you don't want to. Stratom was built so your IT team can easily plug our smart search directly into your company's existing website, internal tools, or apps using a simple API.
+                You don't have to use our dashboard if you don't want to. Straton was built so your IT team can easily plug our smart search directly into your company's existing website, internal tools, or apps using a simple API.
               </p>
 
               <div className="space-y-4 text-xs font-medium text-slate-300">
@@ -391,7 +391,7 @@ const App = () => {
                 <div className="bg-slate-950/80 px-4 py-3 border-b border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
                   <div className="flex items-center gap-2">
                     <Terminal className="w-4 h-4 text-slate-500 flex-shrink-0" aria-hidden="true" />
-                    <span className="font-mono text-xs text-slate-400 truncate">stratom_api_preview</span>
+                    <span className="font-mono text-xs text-slate-400 truncate">straton_api_preview</span>
                   </div>
                   <div className="flex gap-2 w-full sm:w-auto" role="tablist">
                     <button
@@ -440,7 +440,7 @@ const App = () => {
                 </h3>
 
                 <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-10">
-                  We know how important privacy is. Stratom uses the exact same security technology that major banks and hospitals use. We can never view your files, and they are never shared with anyone else.
+                  We know how important privacy is. Straton uses the exact same security technology that major banks and hospitals use. We can never view your files, and they are never shared with anyone else.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-8 text-xs">
@@ -457,7 +457,7 @@ const App = () => {
                       <ShieldCheck className="w-4 h-4 text-cyan-400" aria-hidden="true" /> Employee Logins
                     </h4>
                     <p className="text-slate-500 leading-relaxed">
-                      Easily connect Stratom to your existing company login system so your employees can sign in securely without a new password.
+                      Easily connect Straton to your existing company login system so your employees can sign in securely without a new password.
                     </p>
                   </div>
                 </div>
@@ -477,15 +477,15 @@ const App = () => {
             <div className="space-y-4 md:space-y-6">
               {[
                 {
-                  q: "What kind of files can I upload to Stratom?",
+                  q: "What kind of files can I upload to Straton?",
                   a: "You can upload almost anything. We support videos (MP4, MOV), audio recordings (MP3, WAV), all standard documents (PDF, Word, Excel, PowerPoint), and images (JPG, PNG)."
                 },
                 {
                   q: "Do I need to be good with computers to use this?",
-                  a: "Not at all. If you know how to use Google, you know how to use Stratom. Just type your question into the search bar, and the system does the rest."
+                  a: "Not at all. If you know how to use Google, you know how to use Straton. Just type your question into the search bar, and the system does the rest."
                 },
                 {
-                  q: "Will Stratom use my company's private files to train public AI?",
+                  q: "Will Straton use my company's private files to train public AI?",
                   a: "Absolutely not. We have strict privacy rules built into the software. Your data is isolated to your company alone and is never used to train public models like ChatGPT."
                 }
               ].map((faq, i) => (
@@ -508,10 +508,10 @@ const App = () => {
                 <div className="w-7 h-7 rounded bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
                   <Database className="w-4 h-4 text-white" aria-hidden="true" />
                 </div>
-                <span className="text-xl font-bold text-white tracking-tight">STRATOM<span className="text-cyan-500 font-normal">.AI</span></span>
+                <span className="text-xl font-bold text-white tracking-tight">STRATON<span className="text-cyan-500 font-normal">.AI</span></span>
               </div>
               <p className="text-xs text-slate-500 max-w-sm leading-relaxed mb-6">
-                Stratom helps companies stop wasting time searching for files. We make all your videos, documents, and recordings instantly searchable using safe, private AI.
+                Straton helps companies stop wasting time searching for files. We make all your videos, documents, and recordings instantly searchable using safe, private AI.
               </p>
             </div>
 
@@ -528,14 +528,14 @@ const App = () => {
             <div className="md:col-span-4 col-span-6">
               <h5 className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">Company Details</h5>
               <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                Registered as: STRATOM AI LTD <br />
+                Registered as: STRATON AI LTD <br />
                 System Status: <span className="text-emerald-500 font-mono">All Systems Operational [100%]</span>
               </p>
             </div>
           </div>
 
           <div className="border-t border-slate-900 pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[9px] md:text-[10px] text-slate-600">
-            <p className="text-center sm:text-left">&copy; {new Date().getFullYear()} STRATOM AI LTD. All rights reserved.</p>
+            <p className="text-center sm:text-left">&copy; {new Date().getFullYear()} STRATON AI LTD. All rights reserved.</p>
             <div className="flex items-center gap-2">
               <Lock className="w-3 h-3 text-slate-600" aria-hidden="true" />
               <span>100% SECURE & PRIVATE</span>

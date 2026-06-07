@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stratom.ai/sitemap.xml
+Sitemap: https://straton.tech/sitemap.xml
