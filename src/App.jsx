@@ -106,7 +106,7 @@ const App = () => {
                   aria-label={waitlistStatus === 'submitted' ? 'Joined Waitlist' : 'Request Early Access'}
                   className="bg-cyan-600 hover:bg-cyan-500 text-white px-7 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 whitespace-nowrap"
                 >
-                  {waitlistStatus === 'submitted' ? 'Joined Waitlist!' : 'Request Early Access'}
+                  {waitlistStatus === 'submitted' ? 'Our deployment team will reach out shortly!' : 'Request Early Access'}
                   <ChevronRight className="w-4 h-4" aria-hidden="true" />
                 </button>
               </form>
